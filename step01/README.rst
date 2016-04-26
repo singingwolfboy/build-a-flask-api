@@ -115,7 +115,7 @@ installed by trying to import it, like this:
 
 If you do not get any errors, then you imported Flask successfully.
 
-`Step 2: Hello World`_
+`Step 2: Hello World <https://github.com/singingwolfboy/build-a-flask-api/tree/master/step02>`_
 ======================
 
 .. _Flask: http://flask.pocoo.org/
@@ -123,4 +123,3 @@ If you do not get any errors, then you imported Flask successfully.
 .. _virtual environment: https://virtualenv.pypa.io
 .. _virtualenv: https://virtualenv.pypa.io
 .. _see the Python documentation on virtual environments: https://packaging.python.org/en/latest/installing/#creating-virtual-environments
-.. _Step 2: Hello World: https://github.com/singingwolfboy/build-a-flask-api/tree/master/step02
