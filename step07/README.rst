@@ -150,7 +150,7 @@ And then run the application, just as before:
      * Restarting with stat
 
 Try visiting a few URLs. The application should work exactly as it did in
-Step 6. In step 8, we'll use the database to start doing some things that we
+Step 6. In Step 8, we'll use the database to start doing some things that we
 couldn't do before.
 
 `Step 8: Creating Data from the API <https://github.com/singingwolfboy/build-a-flask-api/tree/master/step08>`_

@@ -9,7 +9,7 @@ David Baumgold will give a `presentation at PyCon 2016`_ that walks through
 the code in this repository. When that presentation is available on YouTube,
 we'll link to it from this repository.
 
-`Start with Installation <https://github.com/singingwolfboy/build-a-flask-api/tree/master/step01>`_
+`Step 1: Installation <https://github.com/singingwolfboy/build-a-flask-api/tree/master/step01>`_
 ==========================
 
 .. _Flask: http://flask.pocoo.org/
