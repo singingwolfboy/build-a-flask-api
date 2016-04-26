@@ -16,10 +16,11 @@ You should see output that looks like this:
 
 .. code-block::
 
-     * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+    * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+    * Restarting with stat
 
 Open your web browser, and visit the URL ``http://127.0.0.1:5000/``. You should
-see "Hello World" in your browser.
+see "Hello World!" in your browser.
 
 Congratulations! You've just run a Flask application. If it was your first
 time doing so, double-congrats! :)
