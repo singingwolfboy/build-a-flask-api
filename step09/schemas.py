@@ -8,4 +8,3 @@ class PuppySchema(ma.ModelSchema):
         model = Puppy
 
 puppy_schema = PuppySchema()
-puppies_schema = PuppySchema(many=True)
