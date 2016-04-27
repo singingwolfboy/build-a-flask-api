@@ -33,6 +33,31 @@ def create_puppy():
     resp.headers["Location"] = location
     return resp
 
+@app.route("/<slug>", methods=["POST"])
+def edit_puppy(slug):
+    puppy = Puppy.query.filter(Puppy.slug==slug).first_or_404()
+    puppy, errors = puppy_schema.load(request.form, instance=puppy)
+    if errors:
+        resp = jsonify(errors)
+        resp.status_code = 400
+        return resp
+
+    puppy.slug = slugify(puppy.name)
+    db.session.add(puppy)
+    db.session.commit()
+
+    resp = jsonify({"message": "updated"})
+    location = url_for("get_puppy", slug=puppy.slug)
+    resp.headers["Location"] = location
+    return resp
+
+@app.route("/<slug>", methods=["DELETE"])
+def delete_puppy(slug):
+    puppy = Puppy.query.filter(Puppy.slug==slug).first_or_404()
+    db.session.delete(puppy)
+    db.session.commit()
+    return jsonify({"message": "deleted"})
+
 if __name__ == "__main__":
     if "createdb" in sys.argv:
         with app.app_context():
