@@ -60,6 +60,12 @@ def delete_puppy(id):
     db.session.commit()
     return jsonify({"message": "deleted"})
 
+@app.errorhandler(404)
+def page_not_found(error):
+    resp = jsonify({"error": "not found"})
+    resp.status_code = 404
+    return resp
+
 if __name__ == "__main__":
     if "createdb" in sys.argv:
         with app.app_context():

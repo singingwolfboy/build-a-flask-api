@@ -53,6 +53,14 @@ in the database. Can you imagine trying to output a million puppies in one
 HTTP request, or even more? In the future, we'll improve on this view to make
 it more performant. But for now, this is a reasonable prototype.
 
+Make 404 Errors Return JSON
+---------------------------
+
+It's kind of annoying to have the entire API return JSON, except for when you
+encounter a 404 Not Found exception, which returns HTML. We can use Flask's
+error handling system to modify the 404 response, so that it returns JSON
+instead.
+
 `Step 12: Users <https://github.com/singingwolfboy/build-a-flask-api/tree/master/step12>`_
 ================
 
