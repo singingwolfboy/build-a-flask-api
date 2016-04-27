@@ -47,7 +47,7 @@ If that works, you should see output that looks something like this:
 
 .. code-block::
 
-    pip 8.1.1 from /usr/local/lib/python2.7/site-packages (python 2.7)
+    pip 8.1.1 from /usr/local/lib/python3.5/site-packages (python 3.5)
 
 If you are running a different version of Pip, that's fine. If you get an
 error, you'll need to fix it, which is outside the scope of this tutorial.
@@ -107,7 +107,7 @@ installed by trying to import it, like this:
 .. code-block:: bash
 
     $ python
-    Python 2.7.11 (default, Dec  5 2015, 14:44:53)
+    Python 3.5.1 (default, Dec  7 2015, 21:59:10)
     [GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.1.76)] on darwin
     Type "help", "copyright", "credits" or "license" for more information.
     >>> import flask
