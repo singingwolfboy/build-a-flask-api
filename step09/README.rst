@@ -83,6 +83,23 @@ Try adding a new column to the Puppy model, and running the code again to see
 how the views adapt. You may have to delete the ``puppy.db`` file, re-create,
 and re-seed the database to make it run properly.
 
+In addition, if you want to define exactly what information gets put into the
+API, you can do that in one place. By default, Marshmallow will output all
+four attributes of the puppy object: ``id``, ``slug``, ``name``,
+and ``image_url``. If you want to switch back to just displaying ``name``
+and ``image_url``, you can set a list of ``fields`` on the
+``PuppySchema.Meta`` class, like this:
+
+.. code-block:: python
+
+    class PuppySchema(ma.ModelSchema):
+        class Meta:
+            model = Puppy
+            fields = ["name", "image_url"]
+
+`Check out the Marshmallow documentation for more information.
+<https://marshmallow.readthedocs.org/en/latest/quickstart.html#refactoring-implicit-field-creation>`_
+
 `Step 10: REST Semantics <https://github.com/singingwolfboy/build-a-flask-api/tree/master/step10>`_
 =========================
 
