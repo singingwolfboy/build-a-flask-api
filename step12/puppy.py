@@ -117,7 +117,7 @@ if __name__ == "__main__":
 
     elif "seeddb" in sys.argv:
         with app.app_context():
-            u1 = User(name="Foo Bar", api_key="abc123")
+            u1 = User(name="Jack London", api_key="abc123")
             p1 = Puppy(slug="rover", name="Rover",
                        image_url="http://example.com/rover.jpg")
             p2 = Puppy(slug="spot", name="Spot",

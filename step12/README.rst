@@ -43,7 +43,7 @@ of ``abc123``. Create and seed the database, and test out this ``/whoami`` view!
 
     $ curl 127.0.0.1:5000/whoami -H "Authorization: abc123"
     {
-      "name": "Foo Bar"
+      "name": "Jack London"
     }
 
 Login-Protected Views
@@ -69,7 +69,7 @@ view that uses this decorator, which you should test out, as well.
     $ curl 127.0.0.1:5000/profile -H "Authorization: abc123"
     {
       "api_key": "abc123",
-      "name": "Foo Bar"
+      "name": "Jack London"
     }
 
 That HTML in the 401 Unauthorized response is a bit ugly. We'll clean that up
