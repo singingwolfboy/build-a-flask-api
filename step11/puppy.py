@@ -31,7 +31,6 @@ def create_puppy():
     db.session.add(puppy)
     db.session.commit()
 
-    # return HTTP response
     resp = jsonify({"message": "created"})
     resp.status_code = 201
     resp.headers["Location"] = puppy.url

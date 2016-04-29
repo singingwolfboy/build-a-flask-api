@@ -26,7 +26,6 @@ def create_puppy():
     db.session.add(puppy)
     db.session.commit()
 
-    # return HTTP response
     resp = jsonify({"message": "created"})
     resp.status_code = 201
     location = url_for("get_puppy", slug=puppy.slug)
