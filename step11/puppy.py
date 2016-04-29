@@ -1,5 +1,5 @@
 import sys
-from flask import Flask, jsonify, request, url_for
+from flask import Flask, jsonify, request
 from models import db, Puppy
 from schemas import ma, puppy_schema, puppies_schema
 from slugify import slugify
