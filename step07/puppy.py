@@ -2,9 +2,11 @@ import sys
 from flask import Flask, jsonify
 from models import db, Puppy
 
+
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///puppy.db"
 db.init_app(app)
+
 
 @app.route("/<slug>")
 def get_puppy(slug):
@@ -14,6 +16,7 @@ def get_puppy(slug):
         "image_url": puppy.image_url,
     }
     return jsonify(output)
+
 
 if __name__ == "__main__":
     if "createdb" in sys.argv:

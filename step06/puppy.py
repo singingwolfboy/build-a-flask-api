@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, abort
 app = Flask(__name__)
 
+
 PUPPIES = {
     "rover": {
         "name": "Rover",
@@ -12,6 +13,7 @@ PUPPIES = {
     },
 }
 
+
 @app.route("/<slug>")
 def get_puppy(slug):
     try:
@@ -19,6 +21,7 @@ def get_puppy(slug):
     except KeyError:
         abort(404)
     return jsonify(puppy)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

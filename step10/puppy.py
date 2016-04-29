@@ -4,15 +4,18 @@ from models import db, Puppy
 from schemas import ma, puppy_schema
 from slugify import slugify
 
+
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///puppy.db"
 db.init_app(app)
 ma.init_app(app)
 
+
 @app.route("/<slug>")
 def get_puppy(slug):
     puppy = Puppy.query.filter(Puppy.slug==slug).first_or_404()
     return puppy_schema.jsonify(puppy)
+
 
 @app.route("/", methods=["POST"])
 def create_puppy():
@@ -32,6 +35,7 @@ def create_puppy():
     resp.headers["Location"] = location
     return resp
 
+
 @app.route("/<slug>", methods=["POST"])
 def edit_puppy(slug):
     puppy = Puppy.query.filter(Puppy.slug==slug).first_or_404()
@@ -50,12 +54,14 @@ def edit_puppy(slug):
     resp.headers["Location"] = location
     return resp
 
+
 @app.route("/<slug>", methods=["DELETE"])
 def delete_puppy(slug):
     puppy = Puppy.query.filter(Puppy.slug==slug).first_or_404()
     db.session.delete(puppy)
     db.session.commit()
     return jsonify({"message": "deleted"})
+
 
 if __name__ == "__main__":
     if "createdb" in sys.argv:

@@ -3,9 +3,11 @@ from flask import Flask, jsonify, request, url_for
 from models import db, Puppy
 from slugify import slugify
 
+
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///puppy.db"
 db.init_app(app)
+
 
 @app.route("/<slug>")
 def get_puppy(slug):
@@ -15,6 +17,7 @@ def get_puppy(slug):
         "image_url": puppy.image_url,
     }
     return jsonify(output)
+
 
 @app.route("/", methods=["POST"])
 def create_puppy():
@@ -39,6 +42,7 @@ def create_puppy():
     resp.status_code = 201
     resp.headers["Location"] = location
     return resp
+
 
 if __name__ == "__main__":
     if "createdb" in sys.argv:

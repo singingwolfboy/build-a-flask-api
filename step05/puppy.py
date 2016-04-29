@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, abort
 app = Flask(__name__)
 
+
 PUPPIES = [
     {
         "name": "Rover",
@@ -12,6 +13,7 @@ PUPPIES = [
     },
 ]
 
+
 @app.route("/<int:index>")
 def get_puppy(index):
     try:
@@ -19,6 +21,7 @@ def get_puppy(index):
     except IndexError:
         abort(404)
     return jsonify(puppy)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

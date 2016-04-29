@@ -4,20 +4,24 @@ from models import db, Puppy
 from schemas import ma, puppy_schema, puppies_schema
 from slugify import slugify
 
+
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///puppy.db"
 db.init_app(app)
 ma.init_app(app)
+
 
 @app.route("/puppies/<int:id>")
 def get_puppy(id):
     puppy = Puppy.query.get_or_404(id)
     return puppy_schema.jsonify(puppy)
 
+
 @app.route("/puppies/", methods=["GET"])
 def list_puppies():
     all_puppies = Puppy.query.all()
     return puppies_schema.jsonify(all_puppies)
+
 
 @app.route("/puppies/", methods=["POST"])
 def create_puppy():
@@ -36,6 +40,7 @@ def create_puppy():
     resp.headers["Location"] = puppy.url
     return resp
 
+
 @app.route("/puppies/<int:id>", methods=["POST"])
 def edit_puppy(id):
     puppy = Puppy.query.get_or_404(id)
@@ -52,6 +57,7 @@ def edit_puppy(id):
     resp = jsonify({"message": "updated"})
     return resp
 
+
 @app.route("/puppies/<int:id>", methods=["DELETE"])
 def delete_puppy(id):
     puppy = Puppy.query.get_or_404(id)
@@ -59,11 +65,13 @@ def delete_puppy(id):
     db.session.commit()
     return jsonify({"message": "deleted"})
 
+
 @app.errorhandler(404)
 def page_not_found(error):
     resp = jsonify({"error": "not found"})
     resp.status_code = 404
     return resp
+
 
 if __name__ == "__main__":
     if "createdb" in sys.argv:
