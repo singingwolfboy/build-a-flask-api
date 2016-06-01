@@ -5,7 +5,9 @@ You want to build an API using Flask_, but you don't know where to start.
 No problem! Follow the instructions in this repository, and you'll have an
 API up and running in no time!
 
-[![Video Presentation on YouTube](images/youtube.png)](https://www.youtube.com/watch?v=6RdZNiyISVU)
+.. image:: images/youtube.png
+   :target: https://www.youtube.com/watch?v=6RdZNiyISVU
+   :alt: Video Presentation on YouTube
 
 David Baumgold gave a `presentation at PyCon 2016`_ that walks through
 the code in this repository. You can watch the video above, and follow along
