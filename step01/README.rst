@@ -66,14 +66,14 @@ like this:
     $ pyvenv venv
 
 If you are using Python 2, you'll need to install the virtualenv_ package
-with Pip, and use the ``virtualenv`` that it installs. Install the package
-like this:
+with Pip, and use the ``virtualenv`` command that it installs.
+Install the package like this:
 
 .. code-block:: bash
 
     $ pip install virtualenv
 
-When the installation is complete, run it like this:
+When the installation is complete, run the command like this:
 
 .. code-block:: bash
 
