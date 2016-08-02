@@ -72,7 +72,7 @@ the slug from the URL. We can do that like this:
 
     Puppy.query.filter(Puppy.slug==slug)
 
-That will select _only_ the puppies that have a matching slug. Once we've
+That will select *only* the puppies that have a matching slug. Once we've
 filtered down the results of the query, we need to actually *get* a result
 from the database. To do that, we can use the ``.first()`` method, but
 Flask-SQLAlchemy provides something even nicer: ``.first_or_404()``. Just like
@@ -140,6 +140,10 @@ create and seed the database:
     Database created!
     $ python puppy.py seeddb
     Database seeded!
+
+When you run this code, you may see warnings about something called
+``SQLALCHEMY_TRACK_MODIFICATIONS``. This is unrelated to this tutorial, and
+any warnings that mention it can be ignored.
 
 And then run the application, just as before:
 
