@@ -114,7 +114,7 @@ command takes a *lot* of different options, but the most relevant ones are:
     Set the HTTP method. To make a POST request, use ``-X POST``
 ``-d [key]=[value]``
     Set a key-value pair in the POST data. You can use this option multiple
-    times, and ``curl`` was combine them all together. To set a ``name``
+    times, and ``curl`` will combine them all together. To set a ``name``
     value to ``Lassie`` and a ``image_url`` value to
     ``http://example.com/lassie.jpg``, use
     ``-d name=Lassie -d image_url=http://example.com/lassie.jpg``
