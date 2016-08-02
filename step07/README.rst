@@ -114,7 +114,7 @@ API. In order to put Rover and Spot back in our API, they first need to go
 into the database. The "seeddb" command will make the code create two
 ``Puppy`` objects, one for Rover and one for Spot, and insert them into the
 database via the SQLAlchemy session. Just like the previous command, the code
-will *not* execute ``all.run()``, so the web server won't run. The code will
+will *not* execute ``app.run()``, so the web server won't run. The code will
 seed this information into the database tables and immediately quit.
 
 Give It a Try
