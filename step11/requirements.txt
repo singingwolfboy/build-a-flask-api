@@ -2,4 +2,4 @@ Flask
 Flask-SQLAlchemy
 Flask-Marshmallow
 Marshmallow-SQLAlchemy
-slugify
+python-slugify

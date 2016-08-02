@@ -3,4 +3,4 @@ Flask-SQLAlchemy
 Flask-Marshmallow
 Marshmallow-SQLAlchemy
 Flask-Login
-slugify
+python-slugify
