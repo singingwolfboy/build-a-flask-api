@@ -79,15 +79,16 @@ When the installation is complete, run it like this:
 
     $ virtualenv venv
 
-When you first create your virtual environment, it is activated for you
-automatically. If you need to re-activate it in the future, use the following
-command:
+Once you've created your virtural environment, you'll need to activate it any
+time you want to use it. To activate it, use the following command:
 
 .. code-block:: bash
 
     $ source venv/bin/activate
 
-For more information about creating and using virtual enviornments,
+You'll need to re-activate the virtual environment every time you run a new
+command line window or tab. For more information about creating and using
+virtual enviornments,
 `see the Python documentation on virtual environments`_.
 
 Install Flask
