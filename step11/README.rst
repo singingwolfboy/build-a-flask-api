@@ -21,8 +21,8 @@ Once we've made this change, we can also remove the "Location" header from
 the HTTP response to the ``edit_puppy()`` view. Since a puppy's URL can't
 change anymore, there's no need to remind the user what the URL is.
 
-Add a ``/puppy`` Prefix to URLs
--------------------------------
+Add a ``/puppies`` Prefix to URLs
+---------------------------------
 
 Prefixing the ID with the data type gives us more flexibility to add new data
 types to our API. Maybe we'll want to create a "Person" class, and associate
